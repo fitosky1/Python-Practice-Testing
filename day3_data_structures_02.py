@@ -7,25 +7,25 @@ Data structures
 import random
 
 # Lists or also called arrays in python
-# weekdays = [
-#     "Monday",
-#     "Tuesday",
-#     "Wednesday",
-#     "Thursday",
-#     "Friday",
-#     "Saturday",
-#     "Sunday",
-# ]
-#
-# letters = [
-#     "A",
-#     "B",
-#     "C",
-#     "D",
-#     "E",
-#     "F",
-#     "G",
-# ]
+weekdays = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+]
+
+letters = [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+]
 #
 # List_nr1 = [1, 2, 3, 4, 5, 6, 7]
 # List_nr2 = [10, 20, 30, 40, 50, 60, 70]
@@ -81,21 +81,30 @@ print(len(list4))
 # only work in place !!!!
 # to create new a new one list1 + list2
 
-list1.append(list4)
-list3.extend(list4)
+list1.append(list3)
+list2.append(list4)
+weekdays.extend(letters)
 list5 = list2 + list4
 #
 # prints to see differences
 print("new appended list1")
 print(list1)
 #
-print("new extended list3")
-print(list3)
+print("new extended list2")
+print(list2)
+#
+print("new extended week")
+print(weekdays)
 #
 print("list5")
 print(list5)
+#
 
 # # print("list_count\n", len(list_append()))
 # # #
 # # print("list_extend\n", list_extend)
 # print("list_count\n", len(list_extend()))
+
+# Slicing lists
+list_sliced1 = list1[2:4]
+print("sliced list1\n", list_sliced1)
