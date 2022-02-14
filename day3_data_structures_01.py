@@ -1,6 +1,6 @@
-'''
+"""
 Data structures
-'''
+"""
 # Lists or also arrays in python
 weekdays = [
     "Monday",
@@ -13,4 +13,5 @@ weekdays = [
 ]
 
 # Tests
-print(weekdays[1])
+w_ind = int(input("which number day of the week are you interested in?\n"))
+print(weekdays[w_ind - 1])
