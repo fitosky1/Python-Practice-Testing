@@ -35,8 +35,9 @@ print(type(addr_bk1))
 #
 # Add / Change / Delete Operations
 # Testing multiple input and split()
-# "Very" synthetic example to minimize the inputs calls and the use of split() function
-# In this case the new entry is "Sr._F Fstr_7 777777 07.07 f-f.com"
+# "Very" synthetic example to minimize the inputs calls (multiple input simultaneously).
+# Use of split() function and the .update() for Dictionaries
+# In this case the a new entry could be in the form "Sr._F Fstr_7 777777 07.07 f-f.com"
 #
 question1 = int(input("do you want to add (1), change(2) or delete(3) an entry?\n"))
 if question1 == 1:
@@ -67,3 +68,5 @@ elif question1 == 3:
         print("New Nested Dictionary: ", addr_bk1)
     else:
         print("Not in address book")
+else:
+    print("There is not such option")
