@@ -57,4 +57,4 @@ for i in range(len(rnd_nested_list)):
         nested_list_mult[i][j] = (
             rnd_nested_list[i][j] * rnd_nested_list2[i][j]
         )  # replace in place
-print(nested_list_mult)
+print("multiplied list", nested_list_mult)
