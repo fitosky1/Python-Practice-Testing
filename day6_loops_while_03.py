@@ -5,9 +5,12 @@ WHILE Loops 02
 # While loops
 #
 import random
+
 #
+# generate random list
 rnd_list = [random.randrange(1, 20) for i in range(10)]
-print("random list", rnd_list, "\n")
+print("random list", rnd_list)
+print(len(rnd_list))
 #
 #
 # Print elements
