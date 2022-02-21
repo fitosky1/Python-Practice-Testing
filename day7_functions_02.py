@@ -43,10 +43,10 @@ rnd_nested_list2 = [
     list(random.sample(range(10, 100), 5)),
     list(random.sample(range(10, 100), 5)),
 ]
-print(rnd_nested_list)
-print(rnd_nested_list2)
+print("list1", rnd_nested_list)
+print("list2", rnd_nested_list2)
 
-
+# find maximum value and indices within a nested list
 def find_max_in_nested(nested_list):
     max_i = 0
     max_j = 0
@@ -58,19 +58,37 @@ def find_max_in_nested(nested_list):
     return nested_list[max_i][max_j], max_i, max_j  # multiple outputs are a tuple
 
 
-print("max within nested list, max_i, max_j", find_max_in_nested(rnd_nested_list))
+print("max within nested list1, max_i, max_j", find_max_in_nested(rnd_nested_list))
 
 # matrix multiplication
 def multilist_mult(list1, list2):
-    tmp_list = list1
-    ln = len(list1)
-    for i in range(ln):
-        for j in range(len(list1[i])):
-            tmp_list[i][j] = list1[i][j] * list2[i][j]  # replace in place
-    return tmp_list
+    ln1 = len(list1)
+    ln2 = len(list1[0])
+    tmp_mlist = [[0 for columns in range(ln2)] for rows in range(ln1)]
+    for i in range(ln1):
+        for j in range(ln2):
+            tmp_mlist[i][j] = list1[i][j] * list2[i][j]  # replace in place
+    return tmp_mlist
 
 
+# print out
 print(
-    "multiplied lists",
-    multilist_mult(rnd_nested_list, rnd_nested_list2),
+    "multiplied lists", multilist_mult(rnd_nested_list, rnd_nested_list2),
+)
+
+# matrix total sum
+def multilist_sum(list1):
+    sum = 0
+    for i in range(len(list1)):
+        for j in range(len(list1[i])):
+            sum += list1[i][j]
+    return sum
+
+
+# print out
+print(
+    "total sum list1", multilist_sum(rnd_nested_list),
+)
+print(
+    "total sum list2", multilist_sum(rnd_nested_list2),
 )
