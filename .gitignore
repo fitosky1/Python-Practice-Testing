@@ -1,2 +1,4 @@
 # ignore example of arparse exercise
 /arguments.py
+Ignore temp txt files
+*.txt
