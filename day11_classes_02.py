@@ -17,9 +17,35 @@ import os
 
 # second way
 class date:
-    def __init__(self, arg_day, arg_month, arg_year):
-        self.day = arg_day  # public and can be changed
-        self.month = arg_month
+    def __init__(self, arg_day, arg_month, arg_year):  # Constructor
+        # self.day = arg_day  # public and can be changed
+        self.month = arg_month  # Attribute
         self.year = arg_year
-        self._day = arg_day  # protected, changed not desired
-        self.__day = arg_day  # private can't be changed or accessed
+        # self._day = arg_day  # Protected, changed not desired (SHOULDN'T)
+        self.__day = arg_day  # Private can't be changed or accessed (NOT RECOMMENDED)
+
+    def set_day(self, new_day):  # Member method setted
+        if new_day < 0:
+            print("negative day")
+        else:
+            self.__day = int(
+                new_day
+            )  # With this "method" way we can change/access a private variable, within the class definition
+            print("day changed")
+
+    def get_day(self):  # Member method gettter
+        return self.__day
+
+
+today = date(24, 2, 2022)
+print(today.month)
+yesterday = date(23, 2, 2022)
+print(yesterday.month)
+
+today.set_day(-1111)
+print(today)
+print(today.get_day())
+
+today.set_day(1111)
+print(today)
+print(today.get_day())
